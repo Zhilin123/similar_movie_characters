@@ -1,0 +1,8 @@
+scikit-learn==0.23.1
+torch==1.6.0
+pytorch-pretrained-bert==0.6.2
+tqdm==4.45.0
+numpy==1.18.1
+beautifulsoup4==4.7.1
+psaw==0.0.7
+praw==6.0.0
