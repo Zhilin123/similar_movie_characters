@@ -1,13 +1,16 @@
 ## Identifying similar movie characters
 
-Ever had the feeling that a character in a movie feels pretty much the same as another character in another movie? Wouldn't it be amazing if we could find more of our favorite character roles, understand what these recurring themes are and perhaps enjoy our binge-watching a little more?
+Ever had the feeling that a character in a movie feels pretty much the same as another character in another movie? Wouldn't it be amazing if we could find more of our favorite character roles, understand what these recurring themes are and perhaps enjoy our binge-watching a little more? 
+
 This code does exactly that.
 
-[Paper](https://github.com/Zhilin123/Publications/blob/master/similar_movie_characters.pdf)
+More interestingly, we might also be able to relate our own experiences to those of movie characters. (Code to be released)
+
+[Data] (https://drive.google.com/file/d/1cF_NMP6yPGyGDQEwmkb8-cHKJB359Xka/view?usp=sharing)
 
 In this task, we try to predict movie characters that are most likely from a common trope (theme in cinematic speak) as another character.
 
-1. ```prepare_dataset/``` : Shows how concise descriptions of characters in tropes are downloaded from allthetropes.org and post-processed. A prepared version of the dataset is available [here](https://drive.google.com/file/d/1cF_NMP6yPGyGDQEwmkb8-cHKJB359Xka/view?usp=sharing).
+1. ```prepare_dataset/``` : Shows how concise descriptions of characters in tropes are downloaded from allthetropes.org and post-processed. A prepared version of the dataset is available [here] (https://drive.google.com/file/d/1cF_NMP6yPGyGDQEwmkb8-cHKJB359Xka/view?usp=sharing).
 
 2. ```get_candidate_embeddings.py```: Demonstrates how paragraph embeddings can be obtained based on these descriptions of movie characters.
 
