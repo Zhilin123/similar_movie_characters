@@ -81,26 +81,26 @@ for i in all_posts_original:
     else:
         labels.append(1)
 
-    max_seq_len = 512
+max_seq_len = 512
 
-    all_posts_original = None
-    del all_posts_original
+all_posts_original = None
+del all_posts_original
 
-    #tokenize
-    input_ids = []
-    segment_ids = []
-    attention_masks = []
-    for i in trange(len(all_post_title)):
-        indexed_tokens_0, segments_id_0, input_mask_0 = tokenize_one_text(all_post_title[i])
-        indexed_tokens_1, segments_id_1, input_mask_1 = tokenize_one_text(all_post_text[i])
-        input_ids.append(indexed_tokens_0 + indexed_tokens_1)
-        segment_ids.append(segments_id_0 + segments_id_1)
-        attention_masks.append(input_mask_0 + input_mask_1)
+#tokenize
+input_ids = []
+segment_ids = []
+attention_masks = []
+for i in trange(len(all_post_title)):
+    indexed_tokens_0, segments_id_0, input_mask_0 = tokenize_one_text(all_post_title[i])
+    indexed_tokens_1, segments_id_1, input_mask_1 = tokenize_one_text(all_post_text[i])
+    input_ids.append(indexed_tokens_0 + indexed_tokens_1)
+    segment_ids.append(segments_id_0 + segments_id_1)
+    attention_masks.append(input_mask_0 + input_mask_1)
 
-        all_post_title = None
-        all_post_text = None
-        del all_post_title
-        del all_post_text
+all_post_title = None
+all_post_text = None
+del all_post_title
+del all_post_text
 
 train_inputs, validation_inputs, train_labels, validation_labels = train_test_split(input_ids, labels,
                                                                 random_state=42, test_size=0.01)
